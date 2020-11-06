@@ -1,0 +1,66 @@
+<h2>{{title}}</h2>
+<h3>{{msg}}</h3>
+<h4>{{username}}</h4>
+<h3>{{student}}</h3>
+<br/>
+
+<hr>
+
+<h3>{{userinfo.username}}</h3>
+
+<div>{{message}}</div>
+
+<h4>angular 绑定值</h4>
+
+<div title='我是一个div'>
+    鼠标放上去瞄一下
+</div>
+
+<br/>
+
+<div [title] = 'student'>
+    haha
+</div>
+
+<div>{{content}}</div>
+<span [innerHTML]='content' class="red"></span>
+
+<br>
+
+<!-- 有序循环 -->
+<ol>
+    <li *ngFor="let item of arr">
+        {{item}}
+    </li>
+</ol>
+
+<!-- 无序循环 -->
+<ul>
+    <li *ngFor="let item of list">
+        {{item}}
+    </li>
+</ul>
+
+<!-- 无序循环 -->
+<ul>
+    <li *ngFor="let item of items">
+        {{item}}
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let item of userlist">
+        {{item.username}} --- {{item.age}}
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let item of cars">
+        <h2>{{item.cate}}</h2>
+        <ol>
+            <li *ngFor="let car of item.list">
+                {{car.title}} --- {{car.price}}
+            </li>
+        </ol>
+    </li>
+</ul>

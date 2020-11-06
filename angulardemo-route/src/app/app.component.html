@@ -1,0 +1,12 @@
+<h2>我是根组件</h2>
+
+<header class="header">
+
+  <a [routerLink]="[ '/home' ]" routerLinkActive="active">首页</a>
+  <a [routerLink]="[ '/news' ]" routerLinkActive="active">新闻组件</a>
+  <a [routerLink]="[ '/product' ]" routerLinkActive="active">商品</a>
+
+</header>
+<hr>
+
+<router-outlet></router-outlet>

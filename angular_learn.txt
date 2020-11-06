@@ -1,0 +1,24 @@
+
+ng new 项目名称 --skip-install
+cd 项目目录 cnpm install
+运行项目
+ng serve
+
+定义组件
+ng g component components/news
+
+
+创建服务命令
+ng g service my-new-service
+
+创建到制定目录下面
+ng g servie services/storage
+
+
+创建的服务需要在app.mjodule.ts文件中引入（通过import）;同时配置（@ngmodule.providers）
+在需要用的组件中依然需要引入，注意路径；
+本身就是一个类，需要实例化一下，
+1.通过new的方式（不推荐）
+2.通过构造函数
+
+p9 组件之间通讯

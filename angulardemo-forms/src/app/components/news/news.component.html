@@ -1,0 +1,48 @@
+<p>news works!</p>
+<form [formGroup]="fg">
+    <table class="table table-bordered">
+        <tr>
+            <td>选择</td>
+            <td>强制查询</td>
+            <td>姓名</td>
+            <td>年龄</td><td>职业</td><td></td></tr>
+        
+        <ng-container formArrayName='arrayList'>
+        <ng-container *ngFor="let row of arrayList.controls;let i =index">
+            <tr>
+            <ng-container [formGroup]="row">
+            <td>
+                <input type="checkbox" class='form-control'  formControlName="isSelect">
+            </td>
+            <td>
+                <input type="checkbox" class='form-control'  formControlName="isfroce">
+            </td>
+            <td>
+                <input type="text" class='form-control'  formControlName="firstName">
+            </td>
+            <td>
+                <input  type="text"class='form-control'  formControlName="age">
+            </td>
+            <td>
+                <input  type="text" class='form-control'  formControlName="profession">
+            </td>
+             
+             <td>
+                <button class='form-control' (click)="delBtn(i)">删除</button>
+            </td>
+       
+        </ng-container>
+    </tr> 
+        </ng-container>
+        </ng-container>
+    
+    </table>
+
+    <button (click)="addBtn()">添加</button>
+    <button (click)="delBtn2()">删除</button>
+    <button (click)="selectAll()">全选</button>
+    <button (click)="clearData()">clear</button>
+    <button (click)="submit()">提交</button>
+</form>
+    <hr>
+    <span>{{fg.value | json}}</span>
