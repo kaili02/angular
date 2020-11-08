@@ -1,0 +1,56 @@
+<p>reports works!</p>
+
+<table>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+2
+        </td>
+        <td>
+3
+        </td>
+        <td>
+4
+        </td>
+        <td>
+5
+        </td>
+    </tr>
+
+    <ng-container *ngFor="let row of reportList; let i=index">
+        <tr>
+            <td>
+                <input type="checkbox" [(ngModel)]="row.isSelect">
+            </td>
+            <td>
+                <input type="checkbox" [(ngModel)]="row.isfroce">
+            </td>
+            <td>
+                <input type="text" [(ngModel)]="row.firstName">
+            </td>
+            <td>
+                <a [href]='row.link'>{{row.link}}</a>
+            </td>
+            <td>
+                <select name="item" id="i" [(ngModel)]="row.selectedValue">
+                    <option [value]="item" *ngFor="let item of items">
+                        {{item}}
+                    </option>
+                </select>
+            </td>
+        </tr>
+    </ng-container>
+    
+</table>
+
+<button (click)="addBtn()">添加</button>
+<button (click)="delBtn()">删除</button>
+<button (click)="selectAll()">全选</button>
+<button (click)="clearData()">clear</button>
+<button (click)="submit()">提交</button>
+
+<span>
+    {{reportList | json}}
+</span>

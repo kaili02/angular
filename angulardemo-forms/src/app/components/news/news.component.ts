@@ -107,7 +107,8 @@ selectAll(){
  
  submit(){
    console.log(this.fg.value);
- }
+
+  }
 
  clearData(){
   this.arrayList.controls.forEach(item=>{
